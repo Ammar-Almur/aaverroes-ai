@@ -1,8 +1,11 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { DrawImageAnnotations } from "@/src/components/images/drawer-image-annotation";
-export default function Image({ params }: { params: { id: string } }) {
-  const id = params?.id;
-
+export default async function Image({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const id = (await params).id;
   return (
     <Box>
       <Stack
@@ -14,9 +17,11 @@ export default function Image({ params }: { params: { id: string } }) {
           Images Details
         </Typography>
       </Stack>
-      <Box mt={4}>
-        <DrawImageAnnotations id={id} />
-      </Box>
+      {id && (
+        <Box mt={4}>
+          <DrawImageAnnotations id={id} />
+        </Box>
+      )}
     </Box>
   );
 }

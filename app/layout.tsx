@@ -11,6 +11,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactNode } from "react";
 import { Layout } from "@/src/components/layout";
 import { CssBaseline } from "@mui/material";
+import { ErrorBoundary } from "@/src/components/error-boundary";
 
 const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
@@ -39,7 +40,9 @@ export default function RootLayout(props: RootLayoutProps) {
             <ThemeProvider theme={theme}>
               <SnackbarProvider maxSnack={3}>
                 <CssBaseline />
-                <Layout>{children}</Layout>
+                <ErrorBoundary>
+                  <Layout>{children}</Layout>
+                </ErrorBoundary>
               </SnackbarProvider>
             </ThemeProvider>
           </QueryClientProvider>
