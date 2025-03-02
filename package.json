@@ -9,17 +9,37 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/cache": "^11.14.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@hookform/resolvers": "^4.1.2",
+    "@mui/icons-material": "^6.4.6",
+    "@mui/material": "^6.4.6",
+    "@mui/material-nextjs": "^6.4.3",
+    "@tanstack/react-query": "^5.66.9",
+    "@types/react-window": "^1.8.8",
+    "axios": "^1.8.1",
+    "dayjs": "^1.11.13",
+    "konva": "^9.3.18",
+    "next": "15.1.7",
+    "notistack": "^3.0.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.1.7"
+    "react-dropzone": "^14.3.8",
+    "react-hook-form": "^7.54.2",
+    "react-konva": "^19.0.3",
+    "react-window": "^1.8.11",
+    "yup": "^1.6.1"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@tanstack/eslint-plugin-query": "^5.66.1",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.1.7",
-    "@eslint/eslintrc": "^3"
-  }
+    "typescript": "^5"
+  },
+  "packageManager": "yarn@1.22.21+sha1.1959a18351b811cdeedbd484a8f86c3cc3bbaf72"
 }

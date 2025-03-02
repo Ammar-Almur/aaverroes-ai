@@ -1,0 +1,19 @@
+.image {
+  min-height: 280px;
+  min-width: 280px;
+  padding: 2px;
+  position: relative;
+}
+.imageActions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+  opacity: 0;
+  transition: all ease 0.5s;
+}
+.image:hover .imageActions {
+  opacity: 1;
+}
